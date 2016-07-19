@@ -396,12 +396,19 @@ header#header {
     right: 30px;
     bottom: 30px;
     display: none;
+	height: 30px;
+	width: 30px;
 }
 .scroll-top a {
     color: #fff;
-    text-transform: uppercase;
+    display: block;
     font-size: 14px;
+    position: relative;
+    text-align: center;
     text-decoration: none;
+    text-transform: uppercase;
+    top: 50%;
+    transform: translateY(-50%);
 }
 .discography-content {
     display: flex;

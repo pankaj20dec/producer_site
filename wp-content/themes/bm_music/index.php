@@ -55,7 +55,7 @@ get_header(); ?>
 								</div>	
 							</div>
 						<?php endwhile;?>
-						<div class="gradient-effect"></div>
+						<div class="gradient-effect1"></div>
 					</div>	
 				</div>
 				<div class="border-bottom"></div>
@@ -89,28 +89,7 @@ get_header(); ?>
 	<section id="latest-release" class="mheight">
 		<div class="flex-container section"> 
 			<div class="inset">
-				<div class="row clearfix">
-					<div class="col-nine centered">
-						<h1 class="title">Latest Releases</h1>
-							<div class="release-content">
-								<div class="slider1">
-									<?php 									 
-										$args = array('post_type' => 'latest-release');
-										$loop = new WP_Query( $args );
-										while ( $loop->have_posts() ) : $loop->the_post();
-										$name = $meta = get_post_meta( get_the_ID(),'wpcf-name', true );
-										?>
-										 <div class="slide">
-											 <?php echo get_the_post_thumbnail();?>
-											 <h3><?php the_title(); ?></h3>
-											 <p><?php echo $name?></p>		
-										  </div>
-									<?php endwhile;?>
-								</div>
-							<div class="border-bottom"></div>
-						</div>
-					</div>
-				</div>
+				<?php echo do_shortcode('[print_responsive_slider_plus_lightbox]'); ?>
 			</div>
 		</div>	
 	</section>

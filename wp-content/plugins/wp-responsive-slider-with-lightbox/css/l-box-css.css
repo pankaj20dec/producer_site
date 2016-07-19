@@ -1,0 +1,289 @@
+/*
+ * FancyBox - jQuery Plugin
+ * Simple and fancy lightbox alternative
+ *
+ * Examples and documentation at: http://fancybox.net
+ * 
+ * Copyright (c) 2008 - 2010 Janis Skarnelis
+ * Modified 2012 Nikola Vidoni (mobile ready, CSS3 optimizations, dropped IE6-7 support for shadows & opacity)
+ * That said, it is hardly a one-person project. Many people have submitted bugs, code, and offered their advice freely. Their support is greatly appreciated.
+ * 
+ * Version: 1.3.6 (22/11/2012)
+ * Requires: jQuery v1.3+
+ *
+ * Dual licensed under the MIT and GPL licenses:
+ *   http://www.opensource.org/licenses/mit-license.php
+ *   http://www.gnu.org/licenses/gpl.html
+ */
+
+@font-face {
+	font-family: 'Proxima_Nova';
+	src: url('fonts/Mark Simonson - Proxima Nova Alt Regular.eot');
+	src: local('☺'), url('fonts/Mark Simonson - Proxima Nova Alt Regular.woff') format('woff'), url('fonts/Mark Simonson - Proxima Nova Alt Regular.ttf') format('truetype'), url('fonts/Mark Simonson - Proxima Nova Alt Regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+} 
+#fancybox-loading_ {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-top: -22px;
+	margin-left: -22px;
+	width: 44px;
+	height: 44px;
+	background: url('../images/vl-box/controls.png') 0 -108px;
+	opacity: 0.8;
+	cursor: pointer;
+	z-index: 9999999;
+	display: none;
+}
+
+#fancybox-loading_ div {
+	width: 44px;
+	height: 44px;
+	background: url('../images/vl-box/loading.gif') center center no-repeat;
+}
+
+#fancybox-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 99999;
+	display: none;
+	box-sizing:content-box;
+	background: rgba(255, 255, 255, 0.9) none repeat scroll 0 0 !important;
+    opacity: 1 !important;
+}
+
+#fancybox-tmp {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	overflow: auto;
+	display: none;
+}
+
+#fancybox-wrap {
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 20px;
+	z-index: 1101;
+	outline: none;
+	display: none;
+	z-index:9999998;
+box-sizing:content-box;
+
+
+}
+
+#fancybox-outer {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	/*background: #fff;
+	-webkit-box-shadow: 0px 0px 15px rgba(0,0,0,0.50);
+	-moz-box-shadow: 0px 0px 15px rgba(0,0,0,0.50);
+	box-shadow: 0px 0px 15px rgba(0,0,0,0.50);
+	filter: progid: DXImageTransform.Microsoft.Blur (pixelradius = 15, enabled = "true") ;
+	*/
+	margin-left: 10px;
+        box-sizing:content-box;
+}
+
+#fancybox-content {
+	width: 0;
+	height: 0;
+	padding: 0;
+	outline: none;
+	position: relative;
+	/* overflow: hidden; */
+	z-index: 1102;
+	border: 0px solid #fff !important; 
+    box-sizing:content-box;
+		
+
+}
+
+#fancybox-hide-sel-frame {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: transparent;
+	z-index: 1101;
+box-sizing:content-box;
+
+
+}
+
+#fancybox-close {
+	position: absolute;
+	top: -24px;
+	right: -28px;
+	width: 36px;
+	/*height: 36px;
+	 background: url('../images/vl-box/controls.png') 0 0 no-repeat; */
+	cursor: pointer;
+	z-index: 1103;
+	display: none;
+}
+#fancybox-close::before {
+    color: #000;
+    content: "Close";
+    font-size: 16px;
+    position: absolute;
+}
+
+#fancybox-error {
+	color: #444;
+	font: normal 12px/20px Arial, Helvetica, sans-serif;
+	padding: 14px;
+	margin: 0;
+}
+
+#fancybox-img {
+	max-width: 100%;
+	max-height: 100%;
+	padding: 0;
+	margin: 0;
+	border: none;
+	outline: none;
+	pointer-events: none;
+}
+
+#fancybox-frame {
+	width: 100%;
+	height: 100%;
+	border: none;
+	display: block;
+box-sizing:content-box;
+
+
+}
+
+#fancybox-left_, #fancybox-right_{
+	bottom: 0;
+    cursor: pointer;
+    display: none;
+    height: 22px;
+    margin-top: -11px;
+    outline: medium none;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    z-index: 1102;
+}
+
+#fancybox-left_ {
+	left: -40px;
+}
+
+#fancybox-right_ {
+	right: -40px;
+}
+
+#fancybox-left-ico_, #fancybox-right-ico_ {
+	cursor: pointer;
+    display: block;
+    height: 22px;
+    left: -9999px;
+    margin-top: -11px;
+    position: absolute;
+    top: 50%;
+    width: 14px;
+    z-index: 1102;
+}
+
+#fancybox-left-ico_ {
+	background: url('../images/vl-box/arrows.png') 0 0 no-repeat;
+	left: -12px;
+}
+
+#fancybox-right-ico_ {
+	background: url('../images/vl-box/arrows.png') 0 -22px no-repeat;
+	left: auto;
+	right: 7px;
+}
+/*
+#fancybox-left_:hover span {
+	
+}
+
+#fancybox-right_:hover span {
+	
+}
+
+#fancybox-title {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	z-index: 1102;
+	background:#000;
+}
+
+.fancybox-title-inside {
+	position: relative;
+	padding-bottom: 10px;
+	color: #333;
+	text-align: center;
+	background: #fff;
+}
+
+.fancybox-title-outside {
+	/*padding-top: 10px;*/
+	color: #fff;
+}
+
+.fancybox-title-over {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	color: #fff;
+	text-align: left;
+}
+
+#fancybox-title-over {
+	display: block;
+	padding: 10px;
+	background-color: #000;
+	background-color: rgba(0,0,0,0.5);	
+}
+
+.fancybox-title-float {
+	position: absolute;
+	bottom: -20px;
+	padding: 6px 12px;
+	width: auto;	
+	color: #fff;
+	font-weight: bold;
+	white-space: nowrap;
+	background-color: rgb(0, 0, 0);
+	background-color: rgba(0, 0, 0, 0.7);
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+}
+#fancybox-content p {
+    font-size: 14px;
+    line-height: 1.4;
+    margin-top: 45px;
+}
+.Imglink {
+    color: #000;
+    font-family: proxima_nova;
+    font-size: 14px;
+    text-decoration: none;
+}
+.clear_description_{margin-top: 5px;line-height:18px;color:#ffffff}
+.playbtnCss {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  background: url("../images/vl-box/player_play.png")  no-repeat center center;
+}
