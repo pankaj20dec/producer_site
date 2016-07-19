@@ -1,0 +1,388 @@
+.mobile-social-icons,.mobile-menu,#menu-container{
+	display: none;
+}
+@media only screen and (max-width: 1080px){
+	.music-name h1{
+		font-size: 40px;
+		letter-spacing: 30px;
+		text-indent: 30px;
+	}
+	body.archive section#news {
+		height: auto !important;
+		padding-top: 80px;
+	}
+	.description {
+		margin-left: 60px;
+		min-height: 100px;
+	}
+}
+
+@media only screen and (max-width: 920px){
+	#clients h3 {
+		font-size: 20px;
+	}
+}
+@media only screen and (max-width: 860px){
+	.music-name h1 {
+		font-size: 32px;
+		letter-spacing: 26px;
+		text-indent: 26px;
+	}
+}
+@media only screen and (max-width: 768px){
+	#latest-release,#clients,#news {
+		display: flex;
+	}
+	#news .section{
+		padding: 0;
+	}
+	.discography .col-nine {
+		width: 100%;
+	}
+}
+
+/**************  Phones ***************/
+
+@media only screen and (max-width: 767px){
+	body{
+		overflow-x: hidden;
+	}
+	.music-name h1 {
+		font-size: 23px;
+		letter-spacing: 20px;
+		text-indent: 20px;
+	}
+	header#header{
+		display: none;
+	}
+	.mobile-menu {
+		display: flex;
+		justify-content: center;
+		padding: 45px 0;
+	}
+	.mobile-menu a{
+		text-decoration: none;
+	}
+	.mobile-menu a span.hamberger{
+		background-color: #d7d7d7;
+		display: inline-block;
+		position: relative;
+		width: 40px;
+		height: 2px;
+		top: 7px;
+	}
+	.mobile-menu a span.hamberger:before{
+		position: absolute;
+		top: -11px;
+		content:"";
+		background-color: #d7d7d7;
+		width: 40px;
+		height: 2px;
+	}
+	.mobile-menu a span.hamberger:after{
+		position: absolute;
+		top: 11px;
+		left: 0;
+		content:"";
+		background-color: #d7d7d7;
+		width: 40px;
+		height: 2px;
+	}
+	.menu-text{
+		font-family: "futura_pt_heavy";
+		font-size: 36px;
+		color: #000;
+		padding-left: 28px;
+	}
+	.site {
+		position: relative;
+	}
+	#menu-container {
+		background: #fff none repeat scroll 0 0;
+		z-index: 999;
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		top: 0;
+		text-align: center;
+		display: none;
+	}
+	#menu-container .menu-menus-container {
+		padding-top: 50px;
+	}
+	#menu-container ul{
+		padding: 0;
+	}
+	#menu-container ul li{
+		list-style: none;
+		display: block;
+		margin: 0 20px;
+		line-height: 45px;
+		padding: 0 10px;
+		}
+	#menu-container ul li a{
+		color: #000;
+		font-family: "Futura_PT_Heavy";
+		font-size: 18px;
+		text-transform: uppercase;
+		text-decoration: none;
+	}
+	.close {
+		color: #000;
+		font-size: 40px;
+		position: absolute;
+		right: 30px;
+		text-decoration: none;
+		top: 10px;
+	}
+	.scroll-down{
+		display: none;
+	}
+	.title{
+		margin-top: 10px;
+		font-size: 36px;
+	}
+	.title::before{
+		width: 140px;
+	}
+	#about .col-seven,#latest-release .col-nine {
+		width: 100%;
+	}
+	#about > div,#news{
+		height: auto !important;
+	}
+	.about-content {
+		font-size: 26px;
+	}
+	#feeds .bx-wrapper {
+		max-width: auto !important;
+	}
+	#latest-release, #clients, #news {
+		display: block;
+	}
+	#clients {
+		height: auto !important;
+	}
+	#latest-release h1 {
+		margin-bottom: 55px;
+	}
+	#news .title {
+		margin-top: 100px;
+	}
+	.slider2 .slide {
+		height: 200px;
+		margin-right: 0 !important;
+	}
+	.tweet{
+		font-size: 20px;
+		text-align: left;
+	}
+	#contact{
+		align-items: center;
+		display: flex;
+		justify-content: center;
+		}
+	#contact .contact-content.section{
+		padding: 0;
+	}
+	#clients .bx-wrapper:first-child {
+		display: none;
+	}
+	#clients .bx-wrapper:nth-child(2) {
+		display: block;
+	}
+	#clients h3{
+		font-size: 30px;
+		margin-bottom: 50px;
+	}
+	#clients .title{
+		margin-bottom: 90px;
+	}
+	.home-background{
+		height: 360px !important;
+	}
+	#latest-release {
+		min-height: auto !important;
+	}	
+	.user img{
+		margin-right: 60px;
+	}
+	.discography .inset{
+		padding: 0 40px;
+	}
+	.category-content h3 {
+		color: #000;
+		font-family: "futura_pt_heavy";
+		font-size: 36px;
+		margin-top: 20px;
+	}
+	.writer-img img{
+		max-width: 100%;
+	}
+	.website-link {
+		margin: 40px 0 30px;
+	}
+	.website-link a{
+		font-size: 26px;
+	}
+	.category-content .social-icons ul li a{
+		margin-right: 50px;
+	}
+	.category-content .social-icons ul li a.youtube {
+		margin-right: 0;
+	}
+	.taxonomy-desc .col-eight{
+		width: 100%;
+		font-size: 26px;
+	}
+	.category-content a[data-readmore-toggle="rmjs-1"],.discography-desc h5,.discography-desc > p,.pdf a{
+		font-size: 26px;
+	}
+	.discography-desc h5,.discography-desc > p{
+		color: #000;
+	}
+	.description{ 
+		border: none;
+		margin-left: 40px;
+	}
+	.discography-content img {
+		height: 120px;
+		margin-bottom: 38px;
+		max-width: none;
+		width: 120px;
+	}
+	.discography-content .col.col-two {
+		width: 23%;
+	}
+	.discography-content .col.col-ten {
+		width: 77%;
+	}
+	body.archive section#news{
+		padding: 0;
+	}
+	.pdf{
+		padding: 100px 0 0;
+	}
+	/**********  Footer  *********/
+	
+	#footer{
+		font-size: 18px;
+		color: #000;
+		height: auto;
+		padding-bottom: 20px;
+	}
+	#footer .social-icons{
+		display: none;
+	}
+	.mobile-social-icons{
+		padding: 80px 0 0;
+		display: block;
+	 }
+	.mobile-social-icons ul{
+		 list-style: none;
+		 margin: 0;
+		 padding: 0;
+	 }
+	.mobile-social-icons ul li{
+		 display: inline-block;
+	 }
+	.mobile-social-icons ul li a {
+		background: rgba(0, 0, 0, 0) url("../images/mobile-social-icons.png") no-repeat scroll 0 0;
+		display: block;
+		height: 32px;
+		margin-right: 60px;
+		text-indent: -9999px;
+		width: 32px;
+	}
+	.mobile-social-icons ul li a.facebook {
+		background-position: 0 0;
+		width: 20px;
+	}
+	.mobile-social-icons ul li a.twitter {
+		background-position: -90px 0;
+	}
+	.mobile-social-icons ul li a.instagram {
+		background-position: -190px 0;
+	}
+	.mobile-social-icons ul li a.youtube {
+		background-position: -288px 0;
+		margin-right: 0;
+	}
+	#footer .mobile-social-icons{
+		display: none;
+	}
+	body.archive #footer .mobile-social-icons {
+		display: block;
+		padding: 90px 0 155px;
+	}
+	
+}
+@media only screen and (max-width: 535px){
+	.music-name h1 {
+		letter-spacing: 14px;
+		text-indent: 14px;
+	}
+	.home-background{
+		height: 280px !important;
+	}
+	.category-content .col-eight{
+		width: 100%;
+	}
+	.discography-content .col.col-ten {
+		width: 71%;
+	}
+	.discography-content .col.col-two {
+		width: 29%;
+	}
+}
+@media only screen and (max-width: 475px){
+	.discography-content .col.col-ten {
+		width: 100%;
+	}
+	.discography-content .col.col-two {
+		width: 100%;
+	}
+	.discography-content img {
+		height: auto;
+		margin-bottom: 0;
+		max-width: 100%;
+		width: auto;
+		margin: 0 auto;
+	}
+	.description {
+		display: flex;
+		justify-content: center;
+		margin: 30px 0;
+	}
+}
+@media only screen and (max-width: 440px){
+	.music-name h1 {
+		letter-spacing: 10px;
+		text-indent: 10px;
+	}
+	
+}
+@media only screen and (max-width: 360px){
+	.music-name h1 {
+		letter-spacing: 4px;
+		text-indent: 4px;
+	}
+	.inset{
+		padding: 0 25px;
+	}
+	.category-content .social-icons ul li a {
+		margin-right: 30px;
+	}
+	#footer{
+		padding: 0 20px 20px;
+	}
+}
+@media only screen and (max-width: 320px){
+	.inset{
+		padding: 0 20px;
+	}
+	.mobile-social-icons ul li a{
+		margin-right: 40px;
+	}
+	
+}
