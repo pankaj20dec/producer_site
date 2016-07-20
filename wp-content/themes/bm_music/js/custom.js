@@ -2,29 +2,18 @@ var wheight, wwidth, hheight,fheight,mheight,slideMargin,minSlides,maxSlides;
 jQuery(document).ready(function(){
 	size();
 	wwidth = jQuery(window).width();
+
+	 jQuery('.video-slider').bxSlider({
+		 pager: false,
+		 controls: true
+	 });
 	
-	if(wwidth < 767){
-		minSlides = 2;
-		maxSlides = 2;
-		slideMargin = 40;
-	}else{
-		minSlides = 3;
-		maxSlides = 3;
-		slideMargin = 70;
-	}
-	 jQuery('.slider1').bxSlider({
-			slideWidth: 360,
-			minSlides: minSlides,
-			maxSlides: minSlides,
-			slideMargin: slideMargin
-		  });
-	
-	 jQuery('.slider3').bxSlider({
+	 /*jQuery('.slider3').bxSlider({
 		slideWidth: 360,
 		minSlides: 3,
 		maxSlides: 3,
 		slideMargin: 70
-	  });
+	  });*/
 	 
 	 jQuery('.scroll-top').click(function(){
 		jQuery('html,body').animate({

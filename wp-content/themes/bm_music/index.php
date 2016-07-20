@@ -37,10 +37,11 @@ get_header(); ?>
 					<h1 class="title">Discography</h1>
 					<div class="mCustomScrollbar custom-scrollbar" data-mcs-theme="dark">
 						<?php 									 
-							$args = array('post_type' => 'latest-release');
+							$args = array('post_type' => 'discography');
 							$loop = new WP_Query( $args );
 							while ( $loop->have_posts() ) : $loop->the_post();
 							$name = $meta = get_post_meta( get_the_ID(),'wpcf-name', true );
+							$timeStamp = $meta = get_post_meta( get_the_ID(),'wpcf-year', true );
 							?>
 							<div class="discography-content">
 								<div class="discography-thumbs">
@@ -49,8 +50,8 @@ get_header(); ?>
 								<div class="description">
 									<div class="discography-desc">
 										<h5><?php the_title(); ?></h5>
-										<p>Sturgill Simpson</p>
-										<p>2015</p>
+										<p><?php echo $name ?></p>
+										<p><?php if($timeStamp !== ""){echo date('Y', $timeStamp); }?></p>
 									</div>
 								</div>	
 							</div>
@@ -62,11 +63,20 @@ get_header(); ?>
 			</div>	
 		</div>	
 	</section>
-	<section id="about" class="section">
-		<div class="flex-container wheight"> 
+	<section id="music" class="wheight">
+		<div class="section"> 
+			<div class="inset">
+				<h1 class="title">Music</h1>
+				<div id="player"></div>
+			</div>
+			<div class="border-bottom"></div>
+		</div>
+	</section>
+	<section id="about" class="wheight flex-container">
+		<div class="section"> 
 			<div class="inset">
 				<div class="row clearfix">
-					<div class="col-seven centered">
+					<div class="col-eleven centered">
 						<?php 
 							
 							$page_id = 12;  //Page ID
@@ -80,51 +90,44 @@ get_header(); ?>
 						<div class="about-content">
 							<?php echo $content; ?>
 						</div>
-						<div class="border-bottom"></div>
 					</div>
 				</div>
 			</div>
+			<div class="border-bottom"></div>
 		</div>
 	</section>
-	<section id="latest-release" class="mheight">
-		<div class="flex-container section"> 
+	<section id="photos" class="wheight flex-container">
+		<div class="section"> 
 			<div class="inset">
+				<h1 class="title">Photos</h1>
 				<?php echo do_shortcode('[print_responsive_slider_plus_lightbox]'); ?>
 			</div>
+			<div class="border-bottom"></div>
 		</div>	
 	</section>
-	<section id="latest-release" class="mheight">
-		<div class="flex-container section"> 
+	<section id="videos" class="">
+		<div class="section"> 
 			<div class="inset">
-				<div class="row clearfix">
-					<div class="col-nine centered">
-						<h1 class="title">Latest Releases</h1>
-							<div class="release-content">
-								<div class="slider1">
-									<?php 									 
-										$args = array('post_type' => 'latest-release');
-										$loop = new WP_Query( $args );
-										while ( $loop->have_posts() ) : $loop->the_post();
-										$name = $meta = get_post_meta( get_the_ID(),'wpcf-name', true );
-										?>
-										 <div class="slide">
-											 <?php echo get_the_post_thumbnail();?>
-											 <h3><?php the_title(); ?></h3>
-											 <p><?php echo $name?></p>		
-										  </div>
-									<?php endwhile;?>
-								</div>
-							<div class="border-bottom"></div>
-						</div>
-					</div>
-				</div>
-			</div>
+				<h1 class="title">Media</h1>
+					<ul class="video-slider">
+					<?php 									 
+						$args = array('post_type' => 'video');
+						$loop = new WP_Query( $args );
+						while ( $loop->have_posts() ) : $loop->the_post();
+						$youtubeId = $meta = get_post_meta( get_the_ID(),'wpcf-youtube-id', true );
+						?>
+						<li> 
+							<iframe width="640" height="360" src="https://www.youtube.com/embed/<?php echo $youtubeId; ?>?rel=0" frameborder="0" allowfullscreen></iframe>
+						</li>
+					<?php endwhile;?>
+					</ul>
+			 </div>
 		</div>	
 	</section>
 	<section id="contact">
-		<div class="contact-content section">
-			<h1 class="title"><a href="javascript:void(0);" class="contact-us">Contact us</a></h1>
-			
+		<div class="section">
+			<h1 class="title">Contact</h1>
+			<a href="#" class="email">contact@email.com</a>
 		</div>	
 	</section>
 <?php get_footer(); ?>

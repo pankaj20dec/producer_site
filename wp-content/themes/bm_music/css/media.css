@@ -2,42 +2,25 @@
 	display: none;
 }
 @media only screen and (max-width: 1080px){
-	.music-name h1{
-		font-size: 40px;
-		letter-spacing: 30px;
-		text-indent: 30px;
-	}
-	body.archive section#news {
-		height: auto !important;
-		padding-top: 80px;
-	}
 	.description {
 		margin-left: 60px;
 		min-height: 100px;
 	}
 }
 
-@media only screen and (max-width: 920px){
-	#clients h3 {
-		font-size: 20px;
-	}
-}
 @media only screen and (max-width: 860px){
 	.music-name h1 {
-		font-size: 32px;
-		letter-spacing: 26px;
-		text-indent: 26px;
+		font-size: 48px;
+		letter-spacing: 24px;
+		text-indent: 24px;
 	}
 }
 @media only screen and (max-width: 768px){
-	#latest-release,#clients,#news {
-		display: flex;
+	#news,#music,#about,#photos{
+		height: auto !important;
 	}
-	#news .section{
-		padding: 0;
-	}
-	.discography .col-nine {
-		width: 100%;
+	#discography{
+		min-height: auto !important;
 	}
 }
 
@@ -47,52 +30,53 @@
 	body{
 		overflow-x: hidden;
 	}
-	.music-name h1 {
-		font-size: 23px;
-		letter-spacing: 20px;
-		text-indent: 20px;
-	}
 	header#header{
 		display: none;
 	}
 	.mobile-menu {
-		display: flex;
-		justify-content: center;
-		padding: 45px 0;
+		display: block;
+		left: 40px;
+		position: fixed;
+		top: 25px;
+		z-index: 99;
 	}
 	.mobile-menu a{
 		text-decoration: none;
+		outline: 0;
 	}
 	.mobile-menu a span.hamberger{
-		background-color: #d7d7d7;
+		background-color: #ffffff;
 		display: inline-block;
 		position: relative;
-		width: 40px;
-		height: 2px;
-		top: 7px;
+		height: 4px;
+		top: 17px;
+		width: 70px;
 	}
 	.mobile-menu a span.hamberger:before{
 		position: absolute;
-		top: -11px;
+		top: -17px;
 		content:"";
-		background-color: #d7d7d7;
-		width: 40px;
-		height: 2px;
+		background-color: #ffffff;
+		width: 70px;
+		height: 4px;
 	}
 	.mobile-menu a span.hamberger:after{
 		position: absolute;
-		top: 11px;
+		top: 17px;
 		left: 0;
 		content:"";
-		background-color: #d7d7d7;
-		width: 40px;
-		height: 2px;
+		background-color: #ffffff;
+		width: 70px;
+		height: 4px;
 	}
-	.menu-text{
-		font-family: "futura_pt_heavy";
-		font-size: 36px;
-		color: #000;
-		padding-left: 28px;
+	.menu-text {
+		color: #ffffff;
+		display: block;
+		font-family: proxima_nova;
+		font-size: 26px;
+		font-weight: 500;
+		line-height: 1;
+		padding-top: 15px;
 	}
 	.site {
 		position: relative;
@@ -135,19 +119,13 @@
 		text-decoration: none;
 		top: 10px;
 	}
-	.scroll-down{
+	.scroll-down img{
 		display: none;
 	}
-	.title{
-		margin-top: 10px;
-		font-size: 36px;
+	.scroll-down a{
+		font-size: 24px;
 	}
-	.title::before{
-		width: 140px;
-	}
-	#about .col-seven,#latest-release .col-nine {
-		width: 100%;
-	}
+	
 	#about > div,#news{
 		height: auto !important;
 	}
@@ -166,9 +144,6 @@
 	#latest-release h1 {
 		margin-bottom: 55px;
 	}
-	#news .title {
-		margin-top: 100px;
-	}
 	.slider2 .slide {
 		height: 200px;
 		margin-right: 0 !important;
@@ -185,25 +160,7 @@
 	#contact .contact-content.section{
 		padding: 0;
 	}
-	#clients .bx-wrapper:first-child {
-		display: none;
-	}
-	#clients .bx-wrapper:nth-child(2) {
-		display: block;
-	}
-	#clients h3{
-		font-size: 30px;
-		margin-bottom: 50px;
-	}
-	#clients .title{
-		margin-bottom: 90px;
-	}
-	.home-background{
-		height: 360px !important;
-	}
-	#latest-release {
-		min-height: auto !important;
-	}	
+	
 	.user img{
 		margin-right: 60px;
 	}

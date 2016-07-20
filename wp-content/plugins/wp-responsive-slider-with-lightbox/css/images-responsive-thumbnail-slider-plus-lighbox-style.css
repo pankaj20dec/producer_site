@@ -124,9 +124,9 @@
     z-index: 9999 ;
 }
 
-.bx-wrapper .bx-controls-direction a.disabled {
+/*.bx-wrapper .bx-controls-direction a.disabled {
     display: none ;
-}
+}*/
 
 /* AUTO CONTROLS (START / STOP) */
 

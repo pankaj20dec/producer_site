@@ -18,6 +18,9 @@
   -ms-touch-action: pan-y;
   touch-action: pan-y;
 }
+#videos .bx-wrapper{
+	margin-bottom: 0;
+}
 .bx-wrapper img {
   max-width: 100%;
   display: block;
@@ -128,7 +131,7 @@ ul.bxslider {
 	top: 35%;
 }
 .bx-wrapper .bx-controls-direction a.disabled {
-  display: none;
+  /* display: none; */
 }
 /* AUTO CONTROLS (START / STOP) */
 .bx-wrapper .bx-controls-auto {
@@ -186,4 +189,12 @@ ul.bxslider {
   display: block;
   font-size: .85em;
   padding: 10px;
+}
+@media only screen and (max-width: 1024px){
+	.bx-wrapper .bx-prev{
+		left: -30px;
+	}
+	.bx-wrapper .bx-next{
+		right: -30px
+	}
 }

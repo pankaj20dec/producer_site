@@ -284,7 +284,7 @@ optgroup {
 .border-bottom {
     height: 1px;
     background-color: #d7d7d7;
-    margin: 60px auto 0;
+    margin: 75px auto 0;
 	max-width: 980px;
 }
 .section {
@@ -367,26 +367,21 @@ header#header {
 #header nav ul li a:hover,#header nav ul li.current a{
 	color: #666666;
 }
-
-#about,
-#latest-release,
-#clients,
-#news,
-#contact {
-    text-align: center;
-}
 .about-content {
-    line-height: 1.6;
+    line-height: 1.4;
+	color: #000;
+}
+#contact{
+	text-align: center;
 }
 #contact .title {
-    font-family: inherit;
+    margin-bottom: 30px;
 }
-#contact .title .contact-us {
+#contact .email{
 	text-decoration: none;
-	color: #666;
-}
-#contact .title .contact-us:hover{
 	color: #000;
+	margin-bottom: 40px;
+	display: block;
 }
 .scroll-top {
     background-color: #666;
@@ -413,6 +408,7 @@ header#header {
 .discography-content {
     display: flex;
     flex-direction: row;
+	color: #000;
 }
 .discography-thumbs{
 	margin-bottom: 18px;
@@ -501,84 +497,60 @@ header#header {
     height: 150px;
 }
 
-/********  Contact form Popup  ************/
-.contact-popup {
-    background: rgba(255, 255, 255, 0.7) none repeat scroll 0 0;
-    bottom: 160px;
-    box-shadow: 0 0 1px 2px #dbdbdb;
-    color: #000;
-    font-family: futura_pt_heavy;
-    left: 0;
-    margin: 0 auto;
-    max-width: 1125px;
-    position: absolute;
-    right: 0;
+.video-slider {
+    margin: 0;
+	text-align: center
+}
+/*************  Audio player  ***********/
+#player{
+	color: #000;
+	background: #f5f5f5;
+}
+.tdicon-td_logo-link{
+	pointer-events: none;
 	display: none;
 }
-.contact-form {
-	clear: right;
-	margin: 0 auto;
-    max-width: 900px;
+.td.player.shrink .cover .cover-img img {
+    margin: 10px auto;
+    max-height: 8pc;
 }
-.contact-form .wpcf7-form > p {
-    float: left;
-    width: 48%;
+.td.player{
+	border: 1px solid #ccc;
 }
-.contact-form .wpcf7-form > p:nth-of-type(2) {
-    float: right;
+.td.player .controls{
+    border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
 }
-.contact-form .wpcf7-form > p:nth-of-type(4),.contact-form .wpcf7-form > p:nth-of-type(5) {
-	clear: both;
-	width: 100%;
+.td.player .scrubber{
+	border-bottom: 1px solid #ccc;
 }
-.contact-popup p span.required{
-		color: #666666;
+.tdrow.social {
+    display: none;
 }
-.contact-form textarea.wpcf7-textarea{
-	width: 100%;
-	box-shadow: 0 0 0 2px #dbdbdb;
-	height: 180px;
-	border: none;
-	margin-top: 6px;
-	resize: none;
+.td.player .info{
+	border-bottom: none;
 }
-.contact-form .wpcf7-text{
-	box-shadow: 0 0 0 2px #dbdbdb;
-	border: none;
-	margin-top: 6px;
-	height: 40px;
-}
-.contact-popup > a.pop-close {
+.td.player .info a {
     color: #000;
-    float: right;
-    font-size: 16px;
-    padding: 20px 30px 10px;
+    font-family: proxima_nova;
+    font-size: 14px;
+    text-decoration: none;
 }
-.wpcf7-form-control.wpcf7-submit {
-    -moz-border-bottom-colors: none;
-    -moz-border-left-colors: none;
-    -moz-border-right-colors: none;
-    -moz-border-top-colors: none;
-    background: transparent none repeat scroll 0 0;
-    border-color: -moz-use-text-color;
-    border-image: none;
-    border-style: none none solid;
-    border-width: medium medium 2px;
-    float: right;
-    line-height: 1;
-    padding: 0;
-	font-size: 22px;
-	margin-bottom: 15px;
+.td.player .info{
+	font-weight: 400;
 }
-div.wpcf7-validation-errors {
-    border: none;
-	clear: both;
+.td.player.shrink .playlist {
+    max-height: 100px;
 }
-div.wpcf7-mail-sent-ok {
-    border: 2px solid #398f14;
-    clear: both;
+.track {
+    background: #ccc;
 }
-
+.highlight-track {
+    background: #000;
+}
+.td.player .slider > .handle{
+	background-color: #000;
+}
 /***********  Footer  ***********/
 
 #footer {
