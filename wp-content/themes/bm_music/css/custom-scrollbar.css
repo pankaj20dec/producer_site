@@ -422,14 +422,14 @@ yx-axis
 
 	/* theme: "dark" */
 
-	.mCS-dark.mCSB_scrollTools .mCSB_draggerRail{ background-color: #cccccc; background-color: rgba(204,204,204,1); }
+	.mCS-dark.mCSB_scrollTools .mCSB_draggerRail{ background-color: #b7b7b7; background-color: rgba(183,183,183,1); }
 
-	.mCS-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{ background-color: #b7b7b7; background-color: rgba(183,183,183,1); }
+	.mCS-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{ background-color: #cccccc; background-color: rgba(204,204,204,1); }
 
-	.mCS-dark.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{ background-color: rgba(183,183,183,1); }
+	.mCS-dark.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{ background-color: rgba(204,204,204,1); }
 
 	.mCS-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
-	.mCS-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{ background-color: rgba(183,183,183,1); }
+	.mCS-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{ background-color: rrgba(204,204,204,1); }
 
 	.mCS-dark.mCSB_scrollTools .mCSB_buttonUp{ background-position: -80px 0; }
 

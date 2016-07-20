@@ -35,29 +35,31 @@ get_header(); ?>
 			<div class="discography-container">
 				<div class="inset">
 					<h1 class="title">Discography</h1>
-					<div class="mCustomScrollbar custom-scrollbar" data-mcs-theme="dark">
-						<?php 									 
-							$args = array('post_type' => 'discography');
-							$loop = new WP_Query( $args );
-							while ( $loop->have_posts() ) : $loop->the_post();
-							$name = $meta = get_post_meta( get_the_ID(),'wpcf-name', true );
-							$timeStamp = $meta = get_post_meta( get_the_ID(),'wpcf-year', true );
-							?>
-							<div class="discography-content">
-								<div class="discography-thumbs">
-									<?php echo the_post_thumbnail(array(120,120));?>
-								</div>
-								<div class="description">
-									<div class="discography-desc">
-										<h5><?php the_title(); ?></h5>
-										<p><?php echo $name ?></p>
-										<p><?php if($timeStamp !== ""){echo date('Y', $timeStamp); }?></p>
+					<div class="scrollbar">
+						<div class="mCustomScrollbar custom-scrollbar" data-mcs-theme="dark">
+							<?php 									 
+								$args = array('post_type' => 'discography');
+								$loop = new WP_Query( $args );
+								while ( $loop->have_posts() ) : $loop->the_post();
+								$name = $meta = get_post_meta( get_the_ID(),'wpcf-name', true );
+								$timeStamp = $meta = get_post_meta( get_the_ID(),'wpcf-year', true );
+								?>
+								<div class="discography-content">
+									<div class="discography-thumbs">
+										<?php echo the_post_thumbnail(array(120,120));?>
 									</div>
-								</div>	
-							</div>
-						<?php endwhile;?>
-						<div class="gradient-effect1"></div>
-					</div>	
+									<div class="description">
+										<div class="discography-desc">
+											<h5><?php the_title(); ?></h5>
+											<p><?php echo $name ?></p>
+											<p><?php if($timeStamp !== ""){echo date('Y', $timeStamp); }?></p>
+										</div>
+									</div>	
+								</div>
+							<?php endwhile;?>
+						</div>
+					<div class="gradient-effect"></div>
+				</div>		
 				</div>
 				<div class="border-bottom"></div>
 			</div>	
