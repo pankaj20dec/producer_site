@@ -7,13 +7,6 @@ jQuery(document).ready(function(){
 		 pager: false,
 		 controls: true
 	 });
-	
-	 /*jQuery('.slider3').bxSlider({
-		slideWidth: 360,
-		minSlides: 3,
-		maxSlides: 3,
-		slideMargin: 70
-	  });*/
 	 
 	 jQuery('.scroll-top').click(function(){
 		jQuery('html,body').animate({
@@ -38,6 +31,7 @@ jQuery(document).ready(function(){
 				parent.addClass('current');
 			}
 		jQuery('#menu-container').fadeOut();
+		jQuery('body').removeClass('overflow-hide');
 			var url = jQuery(this).attr("href");
 			var indexed = url.indexOf("#");
 			var hashTag = url.substr(url.indexOf("#"));
@@ -67,21 +61,14 @@ jQuery(document).ready(function(){
 	});
 	//jQuery('#header').scrollToFixed();	
 	
-	jQuery('.taxonomy-description').readmore({
-		moreLink: '<a href="#">Expand</a>',
-	});
-	jQuery('.contact-us').click(function(){
-		jQuery('.contact-popup').fadeIn(600);
-	});
-	jQuery('.pop-close').click(function(){
-		jQuery('.contact-popup').fadeOut(600);
-	});
 	/************ Mobile menu  ***************/
 	jQuery('.mobile-menu a').click(function(){
 		jQuery('#menu-container').fadeIn(600);
+		jQuery('body').addClass('overflow-hide');
 	});
 	jQuery('.close').click(function(){
 		jQuery('#menu-container').fadeOut(600);
+		jQuery('body').removeClass('overflow-hide');
 	});
 	
 });

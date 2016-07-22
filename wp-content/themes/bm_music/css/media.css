@@ -1,12 +1,6 @@
 .mobile-social-icons,.mobile-menu,#menu-container{
 	display: none;
 }
-@media only screen and (max-width: 1080px){
-	.description {
-		margin-left: 60px;
-		min-height: 100px;
-	}
-}
 
 @media only screen and (max-width: 860px){
 	.music-name h1 {
@@ -30,6 +24,9 @@
 	body{
 		overflow-x: hidden;
 	}
+	body.overflow-hide{
+		overflow: hidden;
+	}
 	header#header{
 		display: none;
 	}
@@ -44,7 +41,7 @@
 		text-decoration: none;
 		outline: 0;
 	}
-	.mobile-menu a span.hamberger{
+	.mobile-menu a span.hamberger,#menu-container a span.close-hamberger{
 		background-color: #ffffff;
 		display: inline-block;
 		position: relative;
@@ -52,7 +49,7 @@
 		top: 17px;
 		width: 70px;
 	}
-	.mobile-menu a span.hamberger:before{
+	.mobile-menu a span.hamberger:before,#menu-container a span.close-hamberger:before{
 		position: absolute;
 		top: -17px;
 		content:"";
@@ -60,7 +57,7 @@
 		width: 70px;
 		height: 4px;
 	}
-	.mobile-menu a span.hamberger:after{
+	.mobile-menu a span.hamberger:after,#menu-container a span.close-hamberger:after{
 		position: absolute;
 		top: 17px;
 		left: 0;
@@ -68,6 +65,20 @@
 		background-color: #ffffff;
 		width: 70px;
 		height: 4px;
+	}
+	#menu-container a span.close-hamberger,#menu-container a span.close-hamberger:before,#menu-container a span.close-hamberger:after{
+		width: 55px;
+	}
+	#menu-container a span.close-hamberger{
+		margin-left: 8px;
+	}
+	#menu-container a span.close-hamberger{
+		transform: rotate(90deg);
+	}
+	.close {
+		display: inline-block;
+		margin: 25px 0 0 40px;
+		text-decoration: none;
 	}
 	.menu-text {
 		color: #ffffff;
@@ -78,21 +89,24 @@
 		line-height: 1;
 		padding-top: 15px;
 	}
+	.close .menu-text{
+		padding-top: 20px;
+	}
 	.site {
 		position: relative;
 	}
 	#menu-container {
-		background: #fff none repeat scroll 0 0;
+		background: rgba(0,0,0,0.9);
 		z-index: 999;
-		position: absolute;
+		position: fixed;
 		height: 100%;
 		width: 100%;
 		top: 0;
-		text-align: center;
 		display: none;
+		overflow: scroll;
 	}
-	#menu-container .menu-menus-container {
-		padding-top: 50px;
+	.mobile-nav{
+		text-align: center;
 	}
 	#menu-container ul{
 		padding: 0;
@@ -100,24 +114,15 @@
 	#menu-container ul li{
 		list-style: none;
 		display: block;
-		margin: 0 20px;
+		margin: 60px 0;
 		line-height: 45px;
-		padding: 0 10px;
+		padding: 0;
 		}
 	#menu-container ul li a{
-		color: #000;
-		font-family: "Futura_PT_Heavy";
-		font-size: 18px;
+		color: #fff;
+		font-size: 40px;
 		text-transform: uppercase;
 		text-decoration: none;
-	}
-	.close {
-		color: #000;
-		font-size: 40px;
-		position: absolute;
-		right: 30px;
-		text-decoration: none;
-		top: 10px;
 	}
 	.scroll-down img{
 		display: none;
@@ -132,17 +137,11 @@
 	.about-content {
 		font-size: 26px;
 	}
+	#about .col-eleven{
+		width: 100%;
+	}
 	#feeds .bx-wrapper {
 		max-width: auto !important;
-	}
-	#latest-release, #clients, #news {
-		display: block;
-	}
-	#clients {
-		height: auto !important;
-	}
-	#latest-release h1 {
-		margin-bottom: 55px;
 	}
 	.slider2 .slide {
 		height: 200px;
@@ -152,74 +151,7 @@
 		font-size: 20px;
 		text-align: left;
 	}
-	#contact{
-		align-items: center;
-		display: flex;
-		justify-content: center;
-		}
-	#contact .contact-content.section{
-		padding: 0;
-	}
 	
-	.user img{
-		margin-right: 60px;
-	}
-	.discography .inset{
-		padding: 0 40px;
-	}
-	.category-content h3 {
-		color: #000;
-		font-family: "futura_pt_heavy";
-		font-size: 36px;
-		margin-top: 20px;
-	}
-	.writer-img img{
-		max-width: 100%;
-	}
-	.website-link {
-		margin: 40px 0 30px;
-	}
-	.website-link a{
-		font-size: 26px;
-	}
-	.category-content .social-icons ul li a{
-		margin-right: 50px;
-	}
-	.category-content .social-icons ul li a.youtube {
-		margin-right: 0;
-	}
-	.taxonomy-desc .col-eight{
-		width: 100%;
-		font-size: 26px;
-	}
-	.category-content a[data-readmore-toggle="rmjs-1"],.discography-desc h5,.discography-desc > p,.pdf a{
-		font-size: 26px;
-	}
-	.discography-desc h5,.discography-desc > p{
-		color: #000;
-	}
-	.description{ 
-		border: none;
-		margin-left: 40px;
-	}
-	.discography-content img {
-		height: 120px;
-		margin-bottom: 38px;
-		max-width: none;
-		width: 120px;
-	}
-	.discography-content .col.col-two {
-		width: 23%;
-	}
-	.discography-content .col.col-ten {
-		width: 77%;
-	}
-	body.archive section#news{
-		padding: 0;
-	}
-	.pdf{
-		padding: 100px 0 0;
-	}
 	/**********  Footer  *********/
 	
 	#footer{
@@ -232,7 +164,7 @@
 		display: none;
 	}
 	.mobile-social-icons{
-		padding: 80px 0 0;
+		padding: 5px 0 25px;
 		display: block;
 	 }
 	.mobile-social-icons ul{
@@ -246,78 +178,141 @@
 	.mobile-social-icons ul li a {
 		background: rgba(0, 0, 0, 0) url("../images/mobile-social-icons.png") no-repeat scroll 0 0;
 		display: block;
-		height: 32px;
+		height: 48px;
 		margin-right: 60px;
 		text-indent: -9999px;
-		width: 32px;
+		width: 46px;
+		outline: 0;
 	}
 	.mobile-social-icons ul li a.facebook {
 		background-position: 0 0;
-		width: 20px;
+		width: 22px;
 	}
 	.mobile-social-icons ul li a.twitter {
-		background-position: -90px 0;
+		background-position: -70px 0;
+		width: 40px;
 	}
 	.mobile-social-icons ul li a.instagram {
-		background-position: -190px 0;
+		background-position: -156px 0;
 	}
 	.mobile-social-icons ul li a.youtube {
-		background-position: -288px 0;
+		background-position: -255px 0;
+	}
+	.mobile-social-icons ul li a.spotify {
+		background-position: -344px 0;
+	}
+	.mobile-social-icons ul li a.apple {
+		background-position: -434px 0;
 		margin-right: 0;
 	}
-	#footer .mobile-social-icons{
-		display: none;
-	}
-	body.archive #footer .mobile-social-icons {
-		display: block;
-		padding: 90px 0 155px;
-	}
 	
+}
+@media only screen and (max-width: 600px){
+	.music-name h1 {
+		font-size: 42px;
+		letter-spacing: 18px;
+		text-indent: 18px;
+	}
+	.border-bottom{
+		margin: 60px auto 0;
+	}
+	.mobile-social-icons ul li a {
+		margin-right: 30px;
+		width: 46px;
+	}
 }
 @media only screen and (max-width: 535px){
 	.music-name h1 {
 		letter-spacing: 14px;
 		text-indent: 14px;
 	}
-	.home-background{
-		height: 280px !important;
-	}
-	.category-content .col-eight{
-		width: 100%;
-	}
-	.discography-content .col.col-ten {
-		width: 71%;
-	}
-	.discography-content .col.col-two {
-		width: 29%;
-	}
 }
 @media only screen and (max-width: 475px){
-	.discography-content .col.col-ten {
-		width: 100%;
-	}
-	.discography-content .col.col-two {
-		width: 100%;
-	}
-	.discography-content img {
-		height: auto;
-		margin-bottom: 0;
-		max-width: 100%;
-		width: auto;
-		margin: 0 auto;
-	}
-	.description {
-		display: flex;
-		justify-content: center;
-		margin: 30px 0;
+	.discography-desc h5{
+		font-size: 22px;
 	}
 }
 @media only screen and (max-width: 440px){
+	body,.about-content{
+		font-size: 22px;
+	}
+	.inset{
+		padding: 0 30px;
+	}
 	.music-name h1 {
 		letter-spacing: 10px;
 		text-indent: 10px;
+		font-size: 36px;
 	}
-	
+	.mobile-social-icons ul li a {
+		margin-right: 14px;
+		width: 32px;
+		background-size: 280px;
+	}
+	.mobile-social-icons ul li a.facebook {
+		background-position: 0 0;
+		width: 16px;
+	}
+	.mobile-social-icons ul li a.twitter {
+		background-position: -40px 0;
+		width: 30px;
+	}
+	.mobile-social-icons ul li a.instagram {
+		background-position: -94px 0;
+	}
+	.mobile-social-icons ul li a.youtube {
+		background-position: -151px 0;
+	}
+	.mobile-social-icons ul li a.spotify {
+		background-position: -202px 0;
+	}
+	.mobile-social-icons ul li a.apple {
+		background-position: -256px 0;
+		margin-right: 0;
+	}
+	.menu-text {
+		font-size: 16px;
+		font-weight: normal;
+		padding-top: 6px;
+	}
+	.mobile-menu a span.hamberger::before{
+		width: 40px;
+		top: -14px;
+	}
+	.mobile-menu a span.hamberger {
+		width: 40px;
+		top: 14px;
+	}
+	.mobile-menu a span.hamberger::after {
+		width: 40px;
+		top: 14px;
+	}
+	.description {
+		margin-left: 20px;
+	}
+	.title{
+		font-size: 32px;
+		margin-bottom: 45px;
+	}
+	iframe {
+		height: 280px;
+		max-width: 100%;
+	}
+	#menu-container a span.close-hamberger,#menu-container a span.close-hamberger:before,#menu-container a span.close-hamberger:after{
+		width: 40px;
+	}
+	#menu-container a span.close-hamberger{
+		margin-left: 0;
+	}
+	.close{
+		margin-top: 20px;
+	}
+	#menu-container ul li {
+		margin: 24px 0;
+	}
+	#menu-container ul li a{
+		font-size: 28px;
+	}
 }
 @media only screen and (max-width: 360px){
 	.music-name h1 {
@@ -327,19 +322,26 @@
 	.inset{
 		padding: 0 25px;
 	}
-	.category-content .social-icons ul li a {
-		margin-right: 30px;
+	body,.about-content.discography-desc h5{
+		font-size: 20px;
 	}
-	#footer{
-		padding: 0 20px 20px;
+	.title{
+		font-size: 28px;
+		margin-bottom: 35px;
+	}
+	.menu-text {
+		padding-top: 14px;
 	}
 }
 @media only screen and (max-width: 320px){
 	.inset{
 		padding: 0 20px;
 	}
-	.mobile-social-icons ul li a{
-		margin-right: 40px;
+	#menu-container ul li {
+		margin: 18px 0;
+	}
+	#menu-container ul li a{
+		font-size: 24px;
 	}
 	
 }

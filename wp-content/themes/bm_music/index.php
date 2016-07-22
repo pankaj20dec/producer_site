@@ -15,7 +15,7 @@
  */
 
 get_header(); ?>
-	<section id="news" class="wheight flex-container">
+	<section id="news" class="wheight1 flex-container">
 		<div class="section"> 
 			<div class="inset">
 				<div class="row clearfix">
@@ -30,7 +30,7 @@ get_header(); ?>
 			<div class="border-bottom"></div>
 		</div>
 	</section>
-	<section id="discography" class="mheight">
+	<section id="discography" class="mheight1">
 		<div class="section"> 
 			<div class="discography-container">
 				<div class="inset">
@@ -65,7 +65,7 @@ get_header(); ?>
 			</div>	
 		</div>	
 	</section>
-	<section id="music" class="wheight">
+	<section id="music" class="wheight1">
 		<div class="section"> 
 			<div class="inset">
 				<h1 class="title">Music</h1>
@@ -74,7 +74,7 @@ get_header(); ?>
 			<div class="border-bottom"></div>
 		</div>
 	</section>
-	<section id="about" class="wheight flex-container">
+	<section id="about" class="wheight1 flex-container">
 		<div class="section"> 
 			<div class="inset">
 				<div class="row clearfix">
@@ -98,7 +98,7 @@ get_header(); ?>
 			<div class="border-bottom"></div>
 		</div>
 	</section>
-	<section id="photos" class="wheight flex-container">
+	<section id="photos" class="wheight1 flex-container">
 		<div class="section"> 
 			<div class="inset">
 				<h1 class="title">Photos</h1>

@@ -18,6 +18,8 @@
 					<li><a href="#" class="twitter">twitter</a></li>
 					<li><a href="#" class="instagram">instagram</a></li>
 					<li><a href="#" class="youtube">youtube</a></li>
+					<li><a href="#" class="spotify">spotify</a></li>
+					<li><a href="#" class="apple">apple</a></li>
 				</ul>	
 			</div>
 			<div class="copyright">

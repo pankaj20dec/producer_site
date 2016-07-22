@@ -198,3 +198,27 @@ ul.bxslider {
 		right: -30px
 	}
 }
+@media only screen and (max-width: 440px){
+	.bx-wrapper .bx-prev{
+		left: -25px;
+	}
+	.bx-wrapper .bx-next{
+		right: -25px
+	}
+}
+@media only screen and (max-width: 360px){
+	.bx-wrapper .bx-prev{
+		left: -20px;
+	}
+	.bx-wrapper .bx-next{
+		right: -20px
+	}
+}
+@media only screen and (max-width: 320px){
+	.bx-wrapper .bx-prev{
+		left: -18px;
+	}
+	.bx-wrapper .bx-next{
+		right: -18px
+	}
+}
